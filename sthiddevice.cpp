@@ -150,6 +150,6 @@ int CStHidDevice::Download(UCHAR* data, ULONGLONG size, CString indent)
 			return err;
 		}
 	}
-	_tprintf(_T("% Done.\n"));
+	_tprintf(_T("Done.\n"));
 	return err;
 }

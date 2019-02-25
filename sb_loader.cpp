@@ -147,7 +147,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 					!g_pMxHidDevice->Execute(MxFunc.ImageParameter.PhyRAMAddr4KRL))
 				{
 					TRACE(__FUNCTION__ " ERROR: Exec RAM failed.\n");
-					_tprintf(_T("%  Failed to exec RAM.\n"), indent);
+					_tprintf(_T("%s  Failed to exec RAM.\n"), indent);
 					nRetCode = 4;
 					return nRetCode;
 				}
@@ -158,7 +158,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 				if (!g_pMxHidDevice->Jump(MxFunc.ImageParameter.PhyRAMAddr4KRL))
 				{
 					TRACE(__FUNCTION__ " ERROR: Jump to RAM failed.\n");
-					_tprintf(_T("%  Failed to jump to RAM.\n"), indent);
+					_tprintf(_T("%s  Failed to jump to RAM.\n"), indent);
 					nRetCode = 5;
 					return nRetCode;
 				}
@@ -323,7 +323,7 @@ int MxMultiImgRun(UCHAR* DataBuf, ULONGLONG fwSize)
 		return -1;
 	} else {
 		TRACE(__FUNCTION__ " Ran into image successfully.\n");
-		_tprintf(_T("%s\nExecuted plugin successfully.\n"));
+		_tprintf(_T("Executed plugin successfully.\n"));
 	}
 	return 0;
 }
