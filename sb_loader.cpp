@@ -286,7 +286,7 @@ int MxSingleImgRun(CString fwFilename, UCHAR* DataBuf, ULONGLONG fwSize, MxHidDe
 
 	if (pMxFunc->Task != MxHidDevice::RUN_PLUGIN)
 	{
-		if (pMxFunc->pIVT && g_pMxHidDevice->SkipDCD())
+		if (pMxFunc->pIVT)
 		{
 			if (!g_pMxHidDevice->Jump(pMxFunc->pIVT->SelfAddr))
 			{

@@ -254,7 +254,7 @@ public:
 	BOOL LoadFirmware(UCHAR *pBuffer, ULONGLONG dataCount, PMxFunc pMxFunc)
 	{
 		return m_IsFitImage ? LoadFitImage(pBuffer + pMxFunc->ImageParameter.CodeOffset, dataCount - pMxFunc->ImageParameter.CodeOffset, pMxFunc) 
-							: Download(pBuffer + pMxFunc->ImageParameter.CodeOffset, dataCount - pMxFunc->ImageParameter.CodeOffset, pMxFunc->ImageParameter.PhyRAMAddr4KRL);
+							: Download(pBuffer, dataCount, pMxFunc->ImageParameter.PhyRAMAddr4KRL);
 	}
 	BOOL Download(UCHAR* pBuffer, ULONGLONG dataCount, UINT RAMAddress);
 	BOOL Execute(UINT32 ImageStartAddr);
